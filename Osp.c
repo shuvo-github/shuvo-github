@@ -40,3 +40,9 @@ int main()
 		wtavg = wtavg + wt[i];
 		tatavg = tatavg + tat[i];
 	}
+printf("\nPROCESS\t\t Queue \t\tBURST TIME\tWAITING TIME\tTURNAROUND TIME");
+	for(i=0;i<n;i++)
+	printf("\n%d \t\t %d \t\t %d \t\t %d \t\t %d ",p[i],su[i],bt[i],wt[i],tat[i]);
+	printf("\nAverage Waiting Time is : %f",wtavg/n);
+	printf("\nAverage Turnaround Time is : %f",tatavg/n);
+}
