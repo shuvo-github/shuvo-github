@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 int main()
 {
@@ -15,3 +14,20 @@ int main()
 		printf("Select Priority (0/1) ? : ");
 		scanf("%d", &su[i]);
 	}
+	for(i=0;i<n;i++)
+		for(k=i+1;k<n;k++)
+		if(su[i] > su[k])
+		{
+			temp=p[i];
+			p[i]=p[k];
+			p[k]=temp;
+			temp=bt[i];
+			bt[i]=bt[k];
+			bt[k]=temp;
+			temp=at[i];
+			at[i]=at[k];
+			at[k]=temp;
+			temp=su[i];
+			su[i]=su[k];
+			su[k]=temp;
+		}
