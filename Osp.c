@@ -31,3 +31,12 @@ int main()
 			su[i]=su[k];
 			su[k]=temp;
 		}
+		wtavg = wt[0] = 0;
+	tatavg = tat[0] = bt[0];
+	for(i=1;i<n;i++)
+	{
+		wt[i] = wt[i-1] + bt[i-1] + at[i-1];
+		tat[i] = tat[i-1] + at[i];
+		wtavg = wtavg + wt[i];
+		tatavg = tatavg + tat[i];
+	}
